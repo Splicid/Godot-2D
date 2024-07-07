@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://clqgbf5v64qmb"]
+
+[ext_resource type="Texture2D" uid="uid://cs2pgyyg1iw21" path="res://graphics/objects/corner.png" id="1_l5ckl"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l5ckl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-161, -159)
+polygon = PackedVector2Array(14, -16, 79, -8, 142, 22, 192, 55, 231, 89, 270, 145, 297, 193, 321, 249, 327, 305, 320, 331, 292, 334, 283, 315, 285, 279, 273, 218, 252, 172, 211, 117, 177, 82, 111, 40, 70, 33, 66, 22, 34, 18, 2, 19, -14, 13, -16, -14)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://qph4tkhd46d3"]
+
+[ext_resource type="PackedScene" uid="uid://du18gvn7vinxo" path="res://scene/player.tscn" id="2_3lm2i"]
+[ext_resource type="PackedScene" uid="uid://clqgbf5v64qmb" path="res://scene/barricade.tscn" id="3_kxn1v"]
+[ext_resource type="PackedScene" uid="uid://c3t7eviqj6spf" path="res://scene/gate.tscn" id="3_qqg3x"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Barricade" parent="." instance=ExtResource("3_kxn1v")]
+position = Vector2(1212, 570)
+
+[node name="Gate" parent="." instance=ExtResource("3_qqg3x")]
+position = Vector2(536, -449)
+
+[node name="Player" parent="." instance=ExtResource("2_3lm2i")]
+position = Vector2(218, 484)
+scale = Vector2(2, 2)
