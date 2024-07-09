@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlm1eiyhg8hcw"]
+
+[ext_resource type="Texture2D" uid="uid://rknc4r6485pn" path="res://graphics/objects/tile_0044.png" id="1_nv7nr"]
+
+[node name="Node2D" type="Area2D"]
+rotation = -1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nv7nr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(5, -3, -6, -3, -6, 3, 5, 3, 5, 2, 6, 2, 6, -2, 5, -2)
