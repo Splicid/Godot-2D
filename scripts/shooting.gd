@@ -2,9 +2,9 @@ extends Node2D
 
 var bullet_scene: PackedScene = preload("res://scene/bullet.tscn")
 
-func shoot():
+func shoot(pos):
 	var bullet = bullet_scene.instantiate()
-	bullet.position = $Player.position
+	bullet.position = pos.position
 	add_child(bullet)
 	
 	
@@ -16,4 +16,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed('fire'):
-		shoot()
+		var marker = $Player/BulletStartPosition.get_children()
+		var selected = marker[0]
+		shoot(selected)
