@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlm1eiyhg8hcw"]
+[gd_scene load_steps=3 format=3 uid="uid://dlm1eiyhg8hcw"]
 
+[ext_resource type="Script" path="res://scene/bullet.gd" id="1_66ncp"]
 [ext_resource type="Texture2D" uid="uid://rknc4r6485pn" path="res://graphics/objects/tile_0044.png" id="1_nv7nr"]
 
-[node name="Node2D" type="Area2D"]
+[node name="bullet" type="Area2D"]
+top_level = true
 rotation = -1.5708
+script = ExtResource("1_66ncp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_nv7nr")

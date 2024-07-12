@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://du18gvn7vinxo"]
+[gd_scene load_steps=4 format=3 uid="uid://du18gvn7vinxo"]
 
 [ext_resource type="Script" path="res://scripts/playerParent.gd" id="1_8dc1m"]
 [ext_resource type="Texture2D" uid="uid://bfbcn0yypfa7s" path="res://graphics/player/player.png" id="1_872mh"]
-[ext_resource type="Script" path="res://scripts/playerSprite.gd" id="3_fy3if"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlpp2"]
 radius = 13.0
@@ -14,7 +13,10 @@ script = ExtResource("1_8dc1m")
 position = Vector2(0, -7)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_872mh")
-script = ExtResource("3_fy3if")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_rlpp2")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(3, -26)
+rotation = -1.5708
