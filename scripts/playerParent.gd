@@ -13,7 +13,7 @@ func _process(_delta):
 	look_at(get_global_mouse_position())
 	rotate(PI/2)
 	
-	
+
 func shoot():
 	var bullet = bullet_scene.instantiate()
 	bullet.global_position = $Muzzle.global_position
