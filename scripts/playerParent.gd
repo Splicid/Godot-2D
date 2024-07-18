@@ -7,11 +7,15 @@ func _process(_delta):
 	velocity = direction * 300
 	move_and_slide()
 	
-	if Input.is_action_just_pressed('fire'):
-		shoot()
 	# look_at and rotate is used for player to face mouse
 	look_at(get_global_mouse_position())
 	rotate(PI/2)
+	
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		if not $Timer.is_stopped():
+			return  # Don't shoot if the timer is running
+		shoot()
+		$Timer.start()  # Start the timer
 	
 
 func shoot():

@@ -14,6 +14,5 @@ func _physics_process(delta):
 		queue_free()
 	
 
-
 func _on_body_entered(body):
-	pass # Replace with function body.
+	queue_free()
