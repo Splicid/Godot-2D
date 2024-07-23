@@ -10,14 +10,15 @@ func _physics_process(delta):
 	const RANGE = 2800
 	const SPEED = 1000
 	var direction = Vector2.RIGHT.rotated(rotation)
-	position += direction * 1000 * delta
+	position += direction * 3000 * delta
 	
 	distance += SPEED * delta
 	if distance > RANGE:
 		queue_free()
 	
 func _on_body_entered(body):
-	if (body.name == "Gate"):
-		var damage = 10
-	emit_signal("damage_to_enemy")
-	queue_free()
+	print(body)
+	if body.has_method("take_damage"):
+		body.take_damage()
+		queue_free()
+

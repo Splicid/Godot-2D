@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3t7eviqj6spf"]
+[gd_scene load_steps=5 format=3 uid="uid://c3t7eviqj6spf"]
 
 [ext_resource type="Texture2D" uid="uid://cfutgi13rdm2e" path="res://graphics/objects/gate.png" id="1_0dfwy"]
 [ext_resource type="Script" path="res://scripts/gate.gd" id="1_e01h0"]
+[ext_resource type="PackedScene" uid="uid://dpn4s55jtr2yi" path="res://scene/light.tscn" id="3_c3yrw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3n1y"]
 size = Vector2(852, 110)
@@ -22,5 +23,9 @@ polygon = PackedVector2Array(-12.4387, 12.6582, -79.5866, 11.0759, -91.3928, -3.
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(62, 653)
 shape = SubResource("RectangleShape2D_j3n1y")
+
+[node name="light" parent="." instance=ExtResource("3_c3yrw")]
+position = Vector2(1493, 289)
+rotation = 1.5708
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

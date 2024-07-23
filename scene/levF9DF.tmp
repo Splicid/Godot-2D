@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://qph4tkhd46d3"]
+[gd_scene load_steps=6 format=3 uid="uid://qph4tkhd46d3"]
 
 [ext_resource type="PackedScene" uid="uid://du18gvn7vinxo" path="res://scene/player.tscn" id="2_3lm2i"]
-[ext_resource type="Texture2D" uid="uid://diim708y1hh1l" path="res://graphics/objects/background-1.png" id="2_pwbls"]
 [ext_resource type="PackedScene" uid="uid://clqgbf5v64qmb" path="res://scene/barricade.tscn" id="3_kxn1v"]
 [ext_resource type="PackedScene" uid="uid://c3t7eviqj6spf" path="res://scene/gate.tscn" id="3_qqg3x"]
 [ext_resource type="PackedScene" uid="uid://dlu2db66g0h05" path="res://scene/box.tscn" id="4_gdw52"]
@@ -10,21 +9,11 @@
 [node name="Level" type="Node2D"]
 script = ExtResource("5_rpcy7")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.180005, 0.180005, 0.180005, 1)
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(872, 85.5)
-scale = Vector2(5.89524, 4.27231)
-texture = ExtResource("2_pwbls")
-
 [node name="Barricade" parent="." groups=["zombies"] instance=ExtResource("3_kxn1v")]
 position = Vector2(1212, 570)
 
 [node name="Gate" parent="." instance=ExtResource("3_qqg3x")]
-position = Vector2(522, -440)
+position = Vector2(536, -449)
 
 [node name="box" parent="." instance=ExtResource("4_gdw52")]
 position = Vector2(646, 887)

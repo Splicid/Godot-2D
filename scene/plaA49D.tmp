@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://du18gvn7vinxo"]
+[gd_scene load_steps=4 format=3 uid="uid://du18gvn7vinxo"]
 
 [ext_resource type="Script" path="res://scripts/playerParent.gd" id="1_8dc1m"]
 [ext_resource type="Texture2D" uid="uid://bfbcn0yypfa7s" path="res://graphics/player/player.png" id="1_872mh"]
-[ext_resource type="Texture2D" uid="uid://dhgejoyenr8cw" path="res://graphics/objects/flashlight_reverse.png" id="3_x6ydn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rlpp2"]
 radius = 13.0
@@ -15,19 +14,12 @@ position = Vector2(0, -7)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_872mh")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(4, -24)
-energy = 0.4
-shadow_enabled = true
-texture = ExtResource("3_x6ydn")
-texture_scale = 0.9
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_rlpp2")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(3, -26)
-target_position = Vector2(0, -591)
+target_position = Vector2(-1, -91)
 
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(3, -26)

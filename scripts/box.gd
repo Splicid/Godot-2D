@@ -9,8 +9,5 @@ func _ready():
 func _process(delta):
 	pass
 	
-
-
-
-func _on_bullet_damage_to_enemy():
-	print("Damage")
+func take_damage():
+	print("we got hit")
