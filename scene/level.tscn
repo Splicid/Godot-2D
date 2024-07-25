@@ -11,7 +11,7 @@
 script = ExtResource("5_rpcy7")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.180005, 0.180005, 0.180005, 1)
+color = Color(0.252028, 0.252028, 0.252028, 1)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 

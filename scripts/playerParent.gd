@@ -12,14 +12,15 @@ func _process(_delta):
 	
 	# look_at and rotate is used for player to face mouse
 	look_at(get_global_mouse_position())
-	rotate(PI/2)
+	rotate(PI/2) 
 	
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		if $RayCast2D.is_colliding():
-			print($RayCast2D.get_collider().name)
+		pass
+		#if $RayCast2D.is_colliding():
+			#print($RayCast2D.get_collider().name)
 		#if not $Timer.is_stopped():
-			#return  # Don't shoot if the timer is running
-		#shoot()
+			#if $RayCast2D.is_colliding():
+				#print($RayCast2D.get_collider().name)
 		#$Timer.start()  # Start the timer
 	
 
